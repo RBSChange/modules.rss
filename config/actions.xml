@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions extends="generic">
+	<!-- 
+	Define here backoffice action
+	Example:
+	<action name="createDocumentName" label="&amp;modules.ModuleName.bo.actions.Create-DocumentName;" icon="YourIconAction">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.createDocument(listWidget, this.name, 'documentName', 'moduleForm');
+		]]></body>
+	</action>
+	-->
+</actions>

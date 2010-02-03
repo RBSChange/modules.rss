@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tags extends="generic">
+
+	<!-- 
+		Define here the tags for the module 
+		Example:
+		<tag label="&amp;modules.moduleName.backoffice.tag.tagName;" icon="IconOfTag">ValueOfTag</tag>
+	-->
+
+</tags>
