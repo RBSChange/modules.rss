@@ -174,7 +174,7 @@ class rss_FeedWriter
 		$this->addElement('description', $item->getRSSDescription());
 		$this->addElement('guid', str_replace('&amp;', '&', $item->getRSSGuid()));
 		$date = date_Calendar::getInstance($item->getRSSDate());
-		$this->addElement('pubDate', gmdate(DATE_RFC822, $date->getTimestamp()));
+		$this->addElement('pubDate', gmdate('r', $date->getTimestamp()));
 	}
 	
 	/**
@@ -206,7 +206,7 @@ class rss_FeedWriter
 	{
 		$website = website_WebsiteModuleService::getInstance()->getCurrentWebsite();
 		$this->xmlWriter->startElement('atom:link');
-		$this->xmlWriter->writeAttribute('href', LinkHelper::getCurrentUrl());
+		$this->xmlWriter->writeAttribute('href', LinkHelper::getCurrentUrlComplete());
 		$this->xmlWriter->writeAttribute('rel', 'self');
 		$this->xmlWriter->writeAttribute('type', 'application/rss+xml');
 		$this->xmlWriter->endElement();
