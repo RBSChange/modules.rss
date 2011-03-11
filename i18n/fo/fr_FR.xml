@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.rss.fo" lcid="fr_FR">
+	<key id="invalid-rss-feed-title">Flux RSS non valide</key>
+	<key id="invalid-rss-feed-description">Ce flux RSS n'est plus valide sur notre site</key>
+</i18n>
