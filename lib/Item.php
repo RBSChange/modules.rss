@@ -25,4 +25,3 @@ interface rss_Item
 	 */
 	public function getRSSDate();
 }
-?>
