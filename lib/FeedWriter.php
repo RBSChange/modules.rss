@@ -172,7 +172,13 @@ class rss_FeedWriter
 	{
 		$this->addElement('title', $item->getRSSLabel());
 		$this->addElement('description', $item->getRSSDescription());
-		$this->addElement('guid', str_replace('&amp;', '&', $item->getRSSGuid()));
+		$url = str_replace('&amp;', '&', $item->getRSSGuid());
+		$this->addElement('guid', $url);
+		if (f_util_ClassUtils::methodExists($item, 'getRSSLink'))
+		{
+			$url = str_replace('&amp;', '&', $item->getRSSLink());
+		}
+		$this->addElement('link', $url);
 		$date = date_Calendar::getInstance($item->getRSSDate());
 		$this->addElement('pubDate', gmdate('r', $date->getTimestamp()));
 	}
