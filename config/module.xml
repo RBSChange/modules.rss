@@ -2,7 +2,7 @@
 <config>
 	<module>
 		<enabled>true</enabled>
-		<visible>false</visible>
+		<visible>true</visible>
 		<icon>wrss</icon>
 		<usetopic>false</usetopic>
 	</module>

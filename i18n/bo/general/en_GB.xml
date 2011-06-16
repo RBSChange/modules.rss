@@ -3,4 +3,6 @@
   <key id="module-name">rss</key>
   <key id="tree-root-name">rss</key>
   <key id="system-folder-name">rss</key>
+    <key id="not-display-bo">this content can't be displayed in backoffice.</key>
+
 </i18n>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.rss.bo.useractionlogger" lcid="fr_FR">
+  <key id="insert-feed">insert.feed {documentlabel}</key>
+  <key id="log-insert-feed">log insert feed</key>
+  <key id="update-feed">update.feed {documentlabel}</key>
+  <key id="log-update-feed">log update feed</key>
+  <key id="activate-feed">activate.feed {documentlabel}</key>
+  <key id="log-activate-feed">log activate feed</key>
+  <key id="insert-feedgroup">insert.feedgroup {documentlabel}</key>
+  <key id="log-insert-feedgroup">log insert feedgroup</key>
+  <key id="activate-feedgroup">activate.feedgroup {documentlabel}</key>
+  <key id="log-activate-feedgroup">log activate feedgroup</key>
+  <key id="deactivated-feed">deactivated.feed {documentlabel}</key>
+  <key id="log-deactivated-feed">log deactivated feed</key>
+</i18n>

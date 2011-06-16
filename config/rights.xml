@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rights>
-	<actions>
-	</actions>
-
-	<roles>	
-		<role name="Admin">
-			<permission name="*" />
-			<permission name="EditLocale"/>
-		</role>
-	</roles>
+  <actions>
+    <document name="feed"/>
+    <document name="feedgroup"/>
+  </actions>
+  <roles>
+    <role name="Admin">
+      <permission name="*"/>
+      <permission name="EditLocale"/>
+    </role>
+  </roles>
 </rights>

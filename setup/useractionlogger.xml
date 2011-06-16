@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+  <binding fileName="modules/useractionlogger/persistentdocument/import/useractionlogger_binding.xml"/>
+  <actiondef modulename="rss" actionname="insert.feed" label="m.rss.bo.useractionlogger.insert-feed"/>
+  <actiondef modulename="rss" actionname="update.feed" label="m.rss.bo.useractionlogger.update-feed"/>
+  <actiondef modulename="rss" actionname="activate.feed" label="m.rss.bo.useractionlogger.activate-feed"/>
+  <actiondef modulename="rss" actionname="insert.feedgroup" label="m.rss.bo.useractionlogger.insert-feedgroup"/>
+  <actiondef modulename="rss" actionname="activate.feedgroup" label="m.rss.bo.useractionlogger.activate-feedgroup"/>
+  <actiondef modulename="rss" actionname="deactivated.feed" label="m.rss.bo.useractionlogger.deactivated-feed"/>
+</script>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/3.5.xsd"
+	model-version="3.5" has-url="false" use-rewrite-url="false">
+	<properties>
+            <add name="feedurl" min-occurs="1" type="String" />
+            <add name="codeReference" type="String">
+                <constraints>unique:true</constraints>
+            </add>
+            <add name="expirestime" min-occurs="0" default-value="60" type="Integer" />
+	</properties>
+</document>

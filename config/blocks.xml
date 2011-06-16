@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
+    <block type="modules_rss_feed" dropModels="[modules_rss/feed],[modules_rss/feedgroup]" hidden="true" >
+        <parameters>
+            <parameter name="displayMode" type="String" min-occurs="1" default-value="Success" fieldtype="modules_rss/feedtemplates" />
+            <parameter name="cleanLevel" type="String" default-value="none" min-occurs="1" list-id="modules_rss/cleanlevels"/>
+            <parameter name="openLinkInNewWindow" type="Boolean" default-value="false" />
+            <parameter name="useLabel" type="Boolean" default-value="true" />
+            <parameter name="titleOnly" type="Boolean" default-value="false" />
+            <parameter name="itemCount" type="Integer" default-value="5">
+                <constraints>min:1;max:50</constraints>
+            </parameter>
+        </parameters>
+    </block>    
 </blocks>

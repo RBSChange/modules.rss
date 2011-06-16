@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.rss.bo.actions" lcid="en_GB">
+  <key id="createfeed">create</key>
+  <key id="createfeedgroup">create</key>
+</i18n>
