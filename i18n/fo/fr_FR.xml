@@ -2,4 +2,5 @@
 <i18n baseKey="m.rss.fo" lcid="fr_FR">
 	<key id="invalid-rss-feed-title">Flux RSS non valide</key>
 	<key id="invalid-rss-feed-description">Ce flux RSS n'est plus valide sur notre site</key>
+	<key id="fromSource">de</key>
 </i18n>

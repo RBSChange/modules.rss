@@ -4,4 +4,8 @@
   <key id="tree-root-name">rss</key>
   <key id="system-folder-name">rss</key>
   <key id="not-display-bo">ce contenu n'est pas affichable en backoffice.</key>
+  <key id="cleanlevel-none">aucun</key>
+  <key id="cleanlevel-low">faible</key>
+  <key id="cleanlevel-medium">medium</key>
+  <key id="cleanlevel-high">fort</key>
 </i18n>

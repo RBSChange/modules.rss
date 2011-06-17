@@ -11,10 +11,16 @@ class rss_FeedItem
 	
 	private $description;
 	
+	private $channelLink;
+	
+	private $channelTitle;
+	
 	/**
 	 * @param DOMElement $item
+	 * @param String $richContentLevel
+	 * @param rss_FeedChannel $parent 
 	 */
-	public function __construct($item, $richContentLevel)
+	public function __construct($item, $richContentLevel, $parent)
 	{
 		$title = $item->getElementsByTagName('title')->item(0);
 		if ($title !== null)
@@ -35,7 +41,7 @@ class rss_FeedItem
 				$this->permalink = trim($link->textContent);	
 			}
 		}
-		
+				
 		$date =  $item->getElementsByTagName('pubDate')->item(0);
 		if ($date !== null)
 		{
@@ -48,7 +54,9 @@ class rss_FeedItem
 		{
 			$this->description = $this->filterContent(trim($description->textContent), $richContentLevel);	
 		}
-		
+
+		$this->channelLink = $parent->getLink();
+		$this->channelTitle = $parent->getTitle();
 	}
 		
 	public function getPermalink()
@@ -127,5 +135,15 @@ class rss_FeedItem
 		list($hour, $minute, $second) = explode(':', $terms[3] . ':00');
 		$timestamp = mktime($hour, $minute, $second, $month, $day, $year);		
 		return date('Y-m-d H:i:s', $timestamp);		
+	}
+	
+	public function getChannelLink()
+	{
+	    return $this->channelLink;
+	}
+	
+	public function getChannelTitle()
+	{
+	    return $this->channelTitle;
 	}
 }

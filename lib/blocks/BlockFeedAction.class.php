@@ -43,7 +43,15 @@ class rss_BlockFeedAction extends website_BlockAction
                 }
                 $request->setAttribute('document', $document);
                 $request->setAttribute('channel', rss_FeedChannel::mergeItems($channels));
+		$titles = array();
+		foreach ($channels as $channel)
+		{
+		    $request->setAttribute($channel->getTitle(), $channel->getLink());
+		    $titles[] = $channel->getTitle();
+		}
+		$request->setAttribute('title', implode(", ", $titles));
                 $request->setAttribute('backoffice', $this->isInBackofficeEdition());
-		return website_BlockView::SUCCESS;
+		
+		return $this->getConfiguration()->getDisplayMode();
 	}
 }

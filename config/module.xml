@@ -3,7 +3,7 @@
 	<module>
 		<enabled>true</enabled>
 		<visible>true</visible>
-		<icon>wrss</icon>
+		<icon>rss</icon>
 		<usetopic>false</usetopic>
 	</module>
 </config>

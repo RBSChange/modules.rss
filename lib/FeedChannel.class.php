@@ -3,6 +3,8 @@ class rss_FeedChannel
 {
 	private $title;
 	
+	private $link;
+	
 	private $items = array();
 	
 	/**
@@ -21,10 +23,15 @@ class rss_FeedChannel
 			{
 				$this->title = $title->textContent;	
 			}
+			$link = $chanel->getElementsByTagName('link')->item(0);
+			if ($link !== null)
+			{
+			    $this->link = $link->textContent;
+			}
 			
 			foreach ($chanel->getElementsByTagName('item') as $nodeItem) 
 			{
-				$item = new rss_FeedItem($nodeItem, $richContentLevel);
+				$item = new rss_FeedItem($nodeItem, $richContentLevel, $this);
 				$this->items[] = $item;
 			}
 		}
@@ -33,6 +40,11 @@ class rss_FeedChannel
 	public function getTitle()
 	{
 		return $this->title;
+	}
+	
+	public function getLink()
+	{
+	    return $this->link;
 	}
 	
 	public function getItems($start = 0, $count = 0)

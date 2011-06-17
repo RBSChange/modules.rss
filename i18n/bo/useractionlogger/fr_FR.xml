@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.rss.bo.useractionlogger" lcid="fr_FR">
-  <key id="insert-feed">insert.feed {documentlabel}</key>
-  <key id="log-insert-feed">log insert feed</key>
-  <key id="update-feed">update.feed {documentlabel}</key>
-  <key id="log-update-feed">log update feed</key>
-  <key id="activate-feed">activate.feed {documentlabel}</key>
-  <key id="log-activate-feed">log activate feed</key>
-  <key id="insert-feedgroup">insert.feedgroup {documentlabel}</key>
-  <key id="log-insert-feedgroup">log insert feedgroup</key>
-  <key id="activate-feedgroup">activate.feedgroup {documentlabel}</key>
-  <key id="log-activate-feedgroup">log activate feedgroup</key>
-  <key id="deactivated-feed">deactivated.feed {documentlabel}</key>
-  <key id="log-deactivated-feed">log deactivated feed</key>
+  <key id="insert-feed">insertion du flux : {documentlabel}</key>
+  <key id="log-insert-feed">log insertion d'un flux</key>
+  <key id="update-feed">mise à jour du flux : {documentlabel}</key>
+  <key id="log-update-feed">log mise à jour d'un flux</key>
+  <key id="activate-feed">activation du flux : {documentlabel}</key>
+  <key id="log-activate-feed">log action d'un flux</key>
+  <key id="insert-feedgroup">insertion d'un groupe de flux : {documentlabel}</key>
+  <key id="log-insert-feedgroup">log insertion d'un groupe de flux</key>
+  <key id="activate-feedgroup">activation du groupe de flux : {documentlabel}</key>
+  <key id="log-activate-feedgroup">log activation d'un groupe de flux</key>
+  <key id="deactivated-feed">désactivation du flux : {documentlabel}</key>
+  <key id="log-deactivated-feed">log desactivation d'un flux</key>
 </i18n>
