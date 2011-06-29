@@ -7,4 +7,5 @@
   <actiondef modulename="rss" actionname="insert.feedgroup" label="m.rss.bo.useractionlogger.insert-feedgroup"/>
   <actiondef modulename="rss" actionname="activate.feedgroup" label="m.rss.bo.useractionlogger.activate-feedgroup"/>
   <actiondef modulename="rss" actionname="deactivated.feed" label="m.rss.bo.useractionlogger.deactivated-feed"/>
+  <actiondef modulename="rss" actionname="update.feedgroup" label="m.rss.bo.useractionlogger.update-feedgroup"/>
 </script>

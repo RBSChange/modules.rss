@@ -12,4 +12,6 @@
   <key id="log-activate-feedgroup">log activation d'un groupe de flux</key>
   <key id="deactivated-feed">désactivation du flux : {documentlabel}</key>
   <key id="log-deactivated-feed">log desactivation d'un flux</key>
+  <key id="update-feedgroup">update.feedgroup {documentlabel}</key>
+  <key id="log-update-feedgroup">log update feedgroup</key>
 </i18n>
