@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.rss.bo.actions" lcid="fr_FR">
-  <key id="createfeed">créer un flux</key>
-  <key id="createfeedgroup">créer un groupe de flux</key>
+	<key id="createfolder_">créer</key>
+	<key id="createrootfolder_">créer</key>
+	<key id="createfeed">créer un flux</key>
+	<key id="createfeedgroup">créer un groupe de flux</key>
 </i18n>

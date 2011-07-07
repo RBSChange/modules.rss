@@ -1,83 +1,93 @@
 <?xml version="1.0"?>
 <perspective>
-  <models>
-    <model name="modules_generic/folder">
-      <contextactions>
-        <contextaction name="edit"/>
-        <contextaction name="translateFrom"/>
-        <contextaction name="viewInformation"/>
-        <contextaction name="delete"/>
-        <contextaction name="openFolder"/>
-        <contextaction name="createFolder"/>
-        <contextaction name="openOrderChildren"/>
-        <contextaction name="createFeedgroup"/>
-        <contextaction name="createFeed"/>
-      </contextactions>
-      <children>
-        <child model="modules_rss/feedgroup"/>
-        <child model="modules_rss/feed"/>
-      </children>
-    </model>
-    <model name="modules_generic/systemfolder">
-      <contextactions>
-        <contextaction name="edit"/>
-        <contextaction name="translateFrom"/>
-        <contextaction name="viewInformation"/>
-      </contextactions>
-    </model>
-    <model name="modules_generic/rootfolder">
-      <contextactions>
-        <contextaction name="translateFrom"/>
-        <contextaction name="viewInformation"/>
-        <contextaction name="createFolder"/>
-        <contextaction name="openOrderChildren"/>
-        <contextaction name="createFeedgroup"/>
-        <contextaction name="createFeed"/>
-      </contextactions>
-      <children>
-        <child model="modules_rss/feedgroup"/>
-        <child model="modules_rss/feed"/>
-      </children>
-    </model>
-    <model name="modules_rss/feedgroup">
-      <contextactions>
-        <contextaction name="edit"/>
-        <contextaction name="delete"/>
-        <contextaction name="activate"/>
-        <contextaction name="deactivated"/>
-        <contextaction name="reactivate"/>
-      </contextactions>
-      <children>
-        <child model="modules_rss/feed"/>
-      </children>
-    </model>
-    <model name="modules_rss/feed">
-      <contextactions>
-        <contextaction name="edit"/>
-        <contextaction name="delete"/>
-        <contextaction name="activate"/>
-        <contextaction name="deactivated"/>
-        <contextaction name="reactivate"/>
-      </contextactions>
-    </model>
-  </models>
-  <toolbar>
-    <toolbarbutton name="edit"/>
-    <toolbarbutton name="translateFrom"/>
-    <toolbarbutton name="viewInformation"/>
-    <toolbarbutton name="delete"/>
-    <toolbarbutton name="createFolder"/>
-    <toolbarbutton name="openOrderChildren"/>
-  </toolbar>
-  <actions>
-    <action name="edit" single="true" permission="Load" icon="edit" label="&amp;modules.uixul.bo.actions.Edit;"/>
-    <action name="translateFrom" single="true" permission="LoadForTranslation" icon="documents_new" label="&amp;modules.uixul.bo.general.translation.Translate-fromEllipsis;"/>
-    <action name="viewInformation" single="true" permission="PreviewBackoffice" icon="document_info" label="&amp;modules.uixul.bo.actions.View-information;"/>
-    <action name="delete" permission="Delete" icon="delete" label="&amp;modules.uixul.bo.actions.Delete;"/>
-    <action name="openFolder" icon="open-folder" label="&amp;modules.uixul.bo.actions.OpenFolder;"/>
-    <action name="createFolder" single="true" icon="create-folder" label="&amp;modules.uixul.bo.actions.Create-folder;"/>
-    <action name="openOrderChildren" single="true" permission="Order" icon="document_exchange" label="&amp;modules.uixul.bo.actions.Set-children-order;"/>
-    <action name="createFeedgroup" single="true" permission="Insert_feedgroup" icon="add"/>
-    <action name="createFeed" single="true" permission="Insert_feed" icon="add"/>
-  </actions>
+	<models>
+		<model name="modules_generic/rootfolder">
+			<children>
+				<child model="modules_rss/feedgroup" />
+				<child model="modules_rss/feed" />
+				<child model="modules_generic/folder" />
+			</children>
+			<drops>
+				<drop model="modules_generic/folder" action="move" />
+				<drop model="modules_rss/feed" action="move" />
+				<drop model="modules_rss/feedgroup" action="move" />
+			</drops>
+			<contextactions>
+				<contextaction name="edit" />
+				<groupactions name="createRootfolder_">
+					<contextaction name="createFeedgroup" />
+					<contextaction name="createFeed" />
+					<contextaction name="createFolder" />
+				</groupactions>
+				<contextaction name="openTreeNodeOrder" />
+			</contextactions>
+
+		</model>
+
+		<model name="modules_generic/folder">
+			<children>
+				<child model="modules_rss/feedgroup" />
+				<child model="modules_rss/feed" />
+				<child model="modules_generic/folder" />
+			</children>
+			<drops>
+				<drop model="modules_generic/folder" action="move" />
+				<drop model="modules_rss/feed" action="move" />
+				<drop model="modules_rss/feedgroup" action="move" />
+			</drops>
+			<contextactions>
+				<contextaction name="edit" />
+				<contextaction name="delete" />
+				<groupactions name="createFolder_">
+					<contextaction name="createFeedgroup" />
+					<contextaction name="createFeed" />
+					<contextaction name="createFolder" />
+				</groupactions>
+				<contextaction name="openTreeNodeOrder" />				
+				<contextaction name="openFolder" />
+			</contextactions>
+		</model>
+		
+		<model name="modules_rss/feedgroup">
+			<contextactions>
+				<contextaction name="edit" />
+				<contextaction name="delete" />
+				<contextaction name="activate" />
+				<contextaction name="deactivated" />
+				<contextaction name="reactivate" />
+			</contextactions>
+		</model>
+		<model name="modules_rss/feed">
+			<contextactions>
+				<contextaction name="edit" />
+				<contextaction name="delete" />
+				<contextaction name="activate" />
+				<contextaction name="deactivated" />
+				<contextaction name="reactivate" />
+			</contextactions>
+		</model>
+	</models>
+	<toolbar>
+		<toolbarbutton name="edit" />
+		<toolbarbutton name="delete" />
+		<toolbarbutton name="activate" />
+		<toolbarbutton name="deactivated" />
+		<toolbarbutton name="reactivate" />
+	</toolbar>
+	<actions>
+		<action name="refresh" single="true" icon="refresh" label="&amp;modules.uixul.bo.actions.Refresh;" />
+		<action name="edit" single="true" permission="Load" icon="edit" label="&amp;modules.uixul.bo.actions.Edit;" />
+		<action name="activate" single="true" permission="Activate" icon="activate" label="&amp;modules.uixul.bo.actions.Activate;" />
+		<action name="deactivated" permission="Deactivated" icon="deactivated" label="&amp;modules.uixul.bo.actions.Deactivate;" />
+		<action name="reactivate" permission="ReActivate" icon="reactivate" label="&amp;modules.uixul.bo.actions.ReActivate;" />
+		<action name="move" permission="Move" icon="up_down" label="&amp;modules.uixul.bo.actions.Move;" />
+		<action name="delete" permission="Delete" icon="delete" label="&amp;modules.uixul.bo.actions.Delete;" />
+		<action name="openFolder" icon="open-folder" label="&amp;modules.uixul.bo.actions.OpenFolder;" />
+		<action name="createRootfolder_" icon="add" />
+		<action name="createFolder_" icon="add" />
+		<action name="createFolder" single="true" icon="create-folder" label="&amp;modules.uixul.bo.actions.Create-folder;" />
+		<action name="openTreeNodeOrder" single="true" permission="Order" icon="sort" label="&amp;modules.uixul.bo.actions.Set-children-order;" />
+		<action name="createFeedgroup" single="true" permission="Insert_feedgroup" icon="add" />
+		<action name="createFeed" single="true" permission="Insert_feed" icon="add" />
+	</actions>
 </perspective>

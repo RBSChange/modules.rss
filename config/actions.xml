@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<actions extends="generic">
-  <!-- 
-	Define here backoffice action
-	Example:
-	<action name="createDocumentName" label="&amp;modules.ModuleName.bo.actions.Create-DocumentName;" icon="YourIconAction">
+<actions>
+	<action name="createFolder">
 		<parameter name="listWidget" />
-		<body><![CDATA[
-			this.createDocument(listWidget, this.name, 'documentName', 'moduleForm');
-		]]></body>
+		<body><![CDATA[this.createDocumentEditor('modules_rss_folder', listWidget.getSelectedItems()[0].id);]]></body>
 	</action>
-	-->
-  <action name="createFeed">
-    <parameter name="listWidget"/>
-    <body><![CDATA[this.createDocumentEditor('modules_rss_feed', listWidget.getSelectedItems()[0].id);]]></body>
-  </action>
-  <action name="createFeedgroup">
-    <parameter name="listWidget"/>
-    <body><![CDATA[this.createDocumentEditor('modules_rss_feedgroup', listWidget.getSelectedItems()[0].id);]]></body>
-  </action>
+	<action name="createFeed">
+		<parameter name="listWidget" />
+		<body><![CDATA[this.createDocumentEditor('modules_rss_feed', listWidget.getSelectedItems()[0].id);]]></body>
+	</action>
+	<action name="createFeedgroup">
+		<parameter name="listWidget" />
+		<body><![CDATA[this.createDocumentEditor('modules_rss_feedgroup', listWidget.getSelectedItems()[0].id);]]></body>
+	</action>
 </actions>

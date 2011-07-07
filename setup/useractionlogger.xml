@@ -8,4 +8,16 @@
   <actiondef modulename="rss" actionname="activate.feedgroup" label="m.rss.bo.useractionlogger.activate-feedgroup"/>
   <actiondef modulename="rss" actionname="deactivated.feed" label="m.rss.bo.useractionlogger.deactivated-feed"/>
   <actiondef modulename="rss" actionname="update.feedgroup" label="m.rss.bo.useractionlogger.update-feedgroup"/>
+  <actiondef modulename="rss" actionname="savepermissions.rootfolder" label="m.rss.bo.useractionlogger.savepermissions-rootfolder"/>
+  <actiondef modulename="rss" actionname="insert.folder" label="m.rss.bo.useractionlogger.insert-folder"/>
+  <actiondef modulename="rss" actionname="update.folder" label="m.rss.bo.useractionlogger.update-folder"/>
+  <actiondef modulename="rss" actionname="savepermissions.folder" label="m.rss.bo.useractionlogger.savepermissions-folder"/>
+  <actiondef modulename="rss" actionname="move.feedgroup" label="m.rss.bo.useractionlogger.move-feedgroup"/>
+  <actiondef modulename="rss" actionname="move.feed" label="m.rss.bo.useractionlogger.move-feed"/>
+  <actiondef modulename="rss" actionname="delete.folder" label="m.rss.bo.useractionlogger.delete-folder"/>
+  <actiondef modulename="rss" actionname="reactivate.feed" label="m.rss.bo.useractionlogger.reactivate-feed"/>
+  <actiondef modulename="rss" actionname="delete.feedgroup" label="m.rss.bo.useractionlogger.delete-feedgroup"/>
+  <actiondef modulename="rss" actionname="delete.feed" label="m.rss.bo.useractionlogger.delete-feed"/>
+  <actiondef modulename="rss" actionname="deactivated.feedgroup" label="m.rss.bo.useractionlogger.deactivated-feedgroup"/>
+  <actiondef modulename="rss" actionname="reactivate.feedgroup" label="m.rss.bo.useractionlogger.reactivate-feedgroup"/>
 </script>
