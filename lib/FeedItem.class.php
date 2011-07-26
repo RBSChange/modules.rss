@@ -87,7 +87,7 @@ class rss_FeedItem
 	public function getLocalDate($format = 'd/m/Y - H:i')
 	{
 		$date = date_Calendar::getInstance(date_Converter::convertDateToLocal($this->date));
-		return date_DateFormat::format($date, $format);
+		return date_Formatter::format($date, $format);
 	}
 	
 	public function getContentForBackoffice()
