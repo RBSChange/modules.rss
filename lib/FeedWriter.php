@@ -211,7 +211,7 @@ class rss_FeedWriter
 	private function writeOptionalTags()
 	{
 		$this->xmlWriter->startElement('atom:link');
-		$this->xmlWriter->writeAttribute('href', LinkHelper::getCurrentUrlComplete());
+		$this->xmlWriter->writeAttribute('href', LinkHelper::getCurrentUrl());
 		$this->xmlWriter->writeAttribute('rel', 'self');
 		$this->xmlWriter->writeAttribute('type', 'application/rss+xml');
 		$this->xmlWriter->endElement();
