@@ -1,5 +1,5 @@
 <h1 change:h="" tal:condition="not: configuration/getUseLabel">${title}</h1>
-<h1 change:h="" tal:condition="configuration/getUseLabel">${document/getLabelAsHtml}</h1>
+<h1 change:h="" tal:condition="configuration/getUseLabel">${structure document/getLabelAsHtml}</h1>
 <ul class="document-list">
         <li class="${php: repeat.item.odd ? 'odd' : 'even'}" tal:repeat="item php:channel.getItems(0, configuration.getItemCount())">
                 <h2 change:h="">
@@ -10,8 +10,8 @@
                 
                 <tal:block tal:condition="not: configuration/getTitleOnly">
                         <p tal:condition="item/getDate" class="date-feedrss">${item/getLocalDate}</p>
-                        <p tal:condition="backoffice" class="content-feedrss">${item/getContentForBackoffice}</p>
-                        <p tal:condition="not: backoffice" class="content-feedrss">${item/getContent}</p>
+                        <p tal:condition="backoffice" class="content-feedrss">${structure item/getContentForBackoffice}</p>
+                        <p tal:condition="not: backoffice" class="content-feedrss">${structure item/getContent}</p>
                 </tal:block>
         </li>
 </ul>

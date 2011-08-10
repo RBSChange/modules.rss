@@ -54,7 +54,6 @@ class rss_BlockFeedAction extends website_BlockAction
 		$titles = array();
 		foreach ($channels as $channel)
 		{
-			$request->setAttribute($channel->getTitle(), $channel->getLink());
 			$titles[] = $channel->getTitle();
 		}
 		$request->setAttribute('title', implode(", ", $titles));
