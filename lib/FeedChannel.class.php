@@ -97,7 +97,11 @@ class rss_FeedChannel
 	{
 		$finalChanel = null;
 		$items = array();
-		$itemCount = 0;
+		$itemTotalCount = 0;
+		foreach ($channelArray as $channel)
+		{
+			$itemTotalCount += count($channel->items);
+		}
 		foreach ($channelArray as $channel)
 		{
 			if ($finalChanel === null)
@@ -110,11 +114,11 @@ class rss_FeedChannel
 			}
 			foreach ($channel->items as $item)
 			{
-				$itemCount ++;
 				/* @var $item rss_FeedItem */
 				$items[date_Calendar::getInstance(
 						date_Converter::convertDateToLocal($item->getDate()))->getTimestamp() . '-' . str_pad(
-						$itemCount, 5, '0')] = $item;
+						$itemTotalCount, 5, '0')] = $item;
+				$itemTotalCount--;
 			}
 		}
 		krsort($items);
