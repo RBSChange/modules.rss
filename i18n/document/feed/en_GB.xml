@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.rss.document.feed" lcid="en_GB">
+  <key id="codereference">Reference code</key>
+  <key id="codereference-help">Reference code of the RSS feed</key>
+  <key id="document-name">feed</key>
+  <key id="expirestime">Expiration time</key>
+  <key id="expirestime-help">Time in minutes for which the data from the RSS feed will be cached. This defines the maximum time between cache updates, the data will still be updated if new data is received from the feed.</key>
+  <key id="feedurl">RSS feed URL</key>
+  <key id="feedurl-help">RSS feed URL</key>
+  <key id="label">label</key>
+  <key id="label-help">Label of the RSS feed displayed as the title, if configured so.</key>
+</i18n>
