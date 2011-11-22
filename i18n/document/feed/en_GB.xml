@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.rss.document.feed" lcid="en_GB">
+  <include id="m.generic.document.document"/>
   <key id="codereference">Reference code</key>
   <key id="codereference-help">Reference code of the RSS feed</key>
   <key id="document-name">feed</key>
