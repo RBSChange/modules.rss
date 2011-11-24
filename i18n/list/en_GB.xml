@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.rss.list" lcid="en_GB">
+  <key id="blocktemplates-success">by default</key>
+  <key id="blocktemplates-success-scrolling">scrolling text</key>
+  <key id="fromSource"/>
+</i18n>
