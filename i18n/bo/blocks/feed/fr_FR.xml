@@ -13,6 +13,6 @@
   <key id="titleonly-help">n'affiche que les titres des items de flux RSS reçu</key>
   <key id="itemcount">nombre d'items affichable</key>
   <key id="itemcount-help">limite du nombre d'items affichable</key>
-  <key id="showSource">afficher la source</key>
-  <key id="showSource-help">affiche la source de l'item et le liens vers le site source</key>
+  <key id="showsource">afficher la source</key>
+  <key id="showsource-help">affiche la source de l'item et le liens vers le site source</key>
 </i18n>
