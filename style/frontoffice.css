@@ -9,9 +9,10 @@
 .tickercontainer ul.newsticker li {
 	float: left; /* important: display inline gives incorrect results when you check for elem's width */
 }
-.tickercontainer ul.newsticker a {
-	margin-right: 50px;
-} 
-.tickercontainer ul.newsticker span {
-	margin-right: 10px;
+.tickercontainer ul.newsticker .item-source {
+	margin-left: 15px;
+}
+.tickercontainer ul.newsticker .separator {
+	margin-right: 25px;
+	margin-left: 25px;
 }
