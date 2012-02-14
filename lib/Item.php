@@ -1,38 +1,38 @@
 <?php
 /**
- * @author intportg
  * @package modules.rss.lib
  */
 interface rss_Item
 {
 	/**
 	 * @see rss_FeedWriter::writeItem
-	 * @return String
+	 * @return string
 	 */
 	public function getRSSLabel();
 	
 	/**
 	 * @see rss_FeedWriter::writeItem
-	 * @return String
+	 * @return string
 	 */
 	public function getRSSDescription();
 	
 	/**
+	 * @example return LinkHelper::getPermalink($this);
 	 * @see rss_FeedWriter::writeItem
-	 * @return String
+	 * @return string
 	 */
 	public function getRSSGuid();
 	
 	/**
 	 * @see rss_FeedWriter::writeItem
-	 * @return String
+	 * @return string
 	 */
 	public function getRSSDate();
 	
 	/**
-	 * Optionnal: if not defined, the link tag of the item will contain the guid.
+	 * @example return LinkHelper::getDocumentUrl($this);
 	 * @see rss_FeedWriter::writeItem
-	 * @return String
+	 * @return string
 	 */
-//	public function getRSSLink();
+	public function getRSSLink();
 }
