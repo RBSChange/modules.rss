@@ -1,5 +1,5 @@
 <h1 change:h="" tal:condition="not: configuration/getUseLabel">${title}</h1>
-<h1 change:h="" tal:condition="configuration/getUseLabel">${document/getLabelAsHtml}</h1>
+<h1 change:h="" tal:condition="configuration/getUseLabel">${document/getLabel}</h1>
 <ul class="document-list">
 	<li class="${alternateclass:itemIdex}" tal:repeat="item php:channel.getItems(0, configuration.getItemCount())">
 		<h2 change:h="">

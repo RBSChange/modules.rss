@@ -1,6 +1,6 @@
 <script change:javascript="head 'modules.rss.lib.js.liscroller'"></script>
 <h2 change:h="" tal:condition="not: configuration/getUseLabel">${title}</h2>
-<h2 change:h="" tal:condition="configuration/getUseLabel">${document/getLabelAsHtml}</h2>
+<h2 change:h="" tal:condition="configuration/getUseLabel">${document/getLabel}</h2>
 <ul class="feedrss ticker" id="ticker01">
 	<li tal:repeat="item php:channel.getItems(0, configuration.getItemCount())">
 		<span tal:condition="item/getDate" class="date-feedrss">${item/getLocalDate}</span>
