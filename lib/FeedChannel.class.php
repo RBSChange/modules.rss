@@ -8,7 +8,7 @@ class rss_FeedChannel
 	private $items = array();
 	
 	/**
-	 * @param String $xml
+	 * @param string $xml
 	 */
 	public function __construct($xml, $richContentLevel)
 	{

@@ -46,7 +46,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getDescription()
 	{
@@ -54,7 +54,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @param String $description
+	 * @param string $description
 	 */
 	public function setDescription($description)
 	{
@@ -62,7 +62,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @return Boolean
+	 * @return boolean
 	 */
 	public function hasDescription()
 	{
@@ -70,7 +70,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getLang()
 	{
@@ -78,7 +78,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @param String $lang
+	 * @param string $lang
 	 */
 	public function setLang($lang)
 	{
@@ -86,7 +86,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @return Boolean
+	 * @return boolean
 	 */
 	public function hasLang()
 	{
@@ -94,7 +94,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getLink()
 	{
@@ -102,7 +102,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @param String $link
+	 * @param string $link
 	 */
 	public function setLink($link)
 	{
@@ -110,7 +110,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @return Boolean
+	 * @return boolean
 	 */
 	public function hasLink()
 	{
@@ -118,7 +118,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getTitle()
 	{
@@ -126,7 +126,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @param String $title
+	 * @param string $title
 	 */
 	public function setTitle($title)
 	{
@@ -134,7 +134,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @return Boolean
+	 * @return boolean
 	 */
 	public function hasTitle()
 	{
@@ -151,7 +151,7 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function toString()
 	{
@@ -184,8 +184,8 @@ class rss_FeedWriter
 	}
 	
 	/**
-	 * @param String $name
-	 * @param String $value
+	 * @param string $name
+	 * @param string $value
 	 */
 	private function addElement($name, $value)
 	{

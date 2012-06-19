@@ -5,15 +5,15 @@
  */
 class rss_FeedgroupScriptDocumentElement extends import_ScriptDocumentElement
 {
-    /**
-     * @return rss_persistentdocument_feedgroup
-     */
-    protected function initPersistentDocument()
-    {
-    	return rss_FeedgroupService::getInstance()->getNewDocumentInstance();
-    }
-    
-    /**
+	/**
+	 * @return rss_persistentdocument_feedgroup
+	 */
+	protected function initPersistentDocument()
+	{
+		return rss_FeedgroupService::getInstance()->getNewDocumentInstance();
+	}
+	
+	/**
 	 * @return f_persistentdocument_PersistentDocumentModel
 	 */
 	protected function getDocumentModel()

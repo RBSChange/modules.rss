@@ -1,27 +1,11 @@
 <?php
 /**
- * rss_FeedService
  * @package modules.rss
+ * @method rss_FeedService getInstance()
  */
 class rss_FeedService extends f_persistentdocument_DocumentService
 {
-        const FEED_ITEM_CACHE_NS = 'feedItemCache';
-	/**
-	 * @var rss_FeedService
-	 */
-	private static $instance;
-
-	/**
-	 * @return rss_FeedService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
+	const FEED_ITEM_CACHE_NS = 'feedItemCache';
 
 	/**
 	 * @return rss_persistentdocument_feed
@@ -39,7 +23,7 @@ class rss_FeedService extends f_persistentdocument_DocumentService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_rss/feed');
+		return $this->getPersistentProvider()->createQuery('modules_rss/feed');
 	}
 	
 	/**
@@ -50,49 +34,48 @@ class rss_FeedService extends f_persistentdocument_DocumentService
 	 */
 	public function createStrictQuery()
 	{
-		return $this->pp->createQuery('modules_rss/feed', false);
+		return $this->getPersistentProvider()->createQuery('modules_rss/feed', false);
 	}
 	
-        /**
-         *
-         * @param rss_persistentdocument_feed $feed 
-         */
-        public function getRawContent($feed)
-        {
-            $cacheItem = null;
-            $useCache = $feed->getExpirestime() > 0;
-            $dcs = f_DataCacheService::getInstance();
-            if ($useCache)
-            {
-                $cacheItem = $dcs->readFromCache(self::FEED_ITEM_CACHE_NS, array('feedId' => $feed->getId()));
-                if ($cacheItem !== null)
-                {
-                    $cacheItem->setTTL($feed->getExpirestime()*60);
-                }
-            }
-            if ($cacheItem !== null && $cacheItem->isValid()) 
-            {
-                return $cacheItem->getValue("xml");
-            }
-            // No cache or expired cache
-            $feedUrl = $feed->getFeedurl();
-            $client = change_HttpClientService::getInstance()->getNewHttpClient(); 
-			$client->setUri($feedUrl);
-			$request = $client->request();
-            if ($request->getStatus() != 200)
-            {
-                return null;
-            }
-            
-			$data = $request->getBody();
-            if ($useCache)
-            {
-                $cacheItem = $dcs->getNewCacheItem(self::FEED_ITEM_CACHE_NS, array('feedId' => $feed->getId()), array('modules_rss/feed'));
-                $cacheItem->setTTL($feed->getExpirestime()*60);
-                $cacheItem->setValue("xml", $data);
-                $dcs->writeToCache($cacheItem);
-            }
-            return $data;
-        }
+	/**
+	 *
+	 * @param rss_persistentdocument_feed $feed 
+	 */
+	public function getRawContent($feed)
+	{
+		$cacheItem = null;
+		$useCache = $feed->getExpirestime() > 0;
+		$dcs = f_DataCacheService::getInstance();
+		if ($useCache)
+		{
+			$cacheItem = $dcs->readFromCache(self::FEED_ITEM_CACHE_NS, array('feedId' => $feed->getId()));
+			if ($cacheItem !== null)
+			{
+				$cacheItem->setTTL($feed->getExpirestime()*60);
+			}
+		}
+		if ($cacheItem !== null && $cacheItem->isValid()) 
+		{
+			return $cacheItem->getValue("xml");
+		}
+		// No cache or expired cache
+		$feedUrl = $feed->getFeedurl();
+		$client = change_HttpClientService::getInstance()->getNewHttpClient(); 
+		$client->setUri($feedUrl);
+		$request = $client->request();
+		if ($request->getStatus() != 200)
+		{
+			return null;
+		}
 		
+		$data = $request->getBody();
+		if ($useCache)
+		{
+			$cacheItem = $dcs->getNewCacheItem(self::FEED_ITEM_CACHE_NS, array('feedId' => $feed->getId()), array('modules_rss/feed'));
+			$cacheItem->setTTL($feed->getExpirestime()*60);
+			$cacheItem->setValue("xml", $data);
+			$dcs->writeToCache($cacheItem);
+		}
+		return $data;
+	}
 }

@@ -17,7 +17,7 @@ interface rss_Item
 	public function getRSSDescription();
 	
 	/**
-	 * @example return LinkHelper::getPermalink($this);
+	 * For example return LinkHelper::getPermalink($this);
 	 * @see rss_FeedWriter::writeItem
 	 * @return string
 	 */
@@ -30,7 +30,7 @@ interface rss_Item
 	public function getRSSDate();
 	
 	/**
-	 * @example return LinkHelper::getDocumentUrl($this);
+	 * For example return LinkHelper::getDocumentUrl($this);
 	 * @see rss_FeedWriter::writeItem
 	 * @return string
 	 */

@@ -1,27 +1,10 @@
 <?php
 /**
- * rss_FeedgroupService
  * @package modules.rss
+ * @method rss_FeedgroupService getInstance()
  */
 class rss_FeedgroupService extends f_persistentdocument_DocumentService
 {
-	/**
-	 * @var rss_FeedgroupService
-	 */
-	private static $instance;
-
-	/**
-	 * @return rss_FeedgroupService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return rss_persistentdocument_feedgroup
 	 */
@@ -38,7 +21,7 @@ class rss_FeedgroupService extends f_persistentdocument_DocumentService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_rss/feedgroup');
+		return $this->getPersistentProvider()->createQuery('modules_rss/feedgroup');
 	}
 	
 	/**
@@ -49,6 +32,6 @@ class rss_FeedgroupService extends f_persistentdocument_DocumentService
 	 */
 	public function createStrictQuery()
 	{
-		return $this->pp->createQuery('modules_rss/feedgroup', false);
+		return $this->getPersistentProvider()->createQuery('modules_rss/feedgroup', false);
 	}
 }

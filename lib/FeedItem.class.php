@@ -5,8 +5,8 @@ class rss_FeedItem
 	
 	private $permalink;
 	
-        private $rawDate;
-        
+		private $rawDate;
+		
 	private $date;
 	
 	private $description;
@@ -17,7 +17,7 @@ class rss_FeedItem
 	
 	/**
 	 * @param DOMElement $item
-	 * @param String $richContentLevel
+	 * @param string $richContentLevel
 	 * @param rss_FeedChannel $parent 
 	 */
 	public function __construct($item, $richContentLevel, $parent)
@@ -46,7 +46,7 @@ class rss_FeedItem
 		if ($date !== null)
 		{
 			$this->date = $this->parseRSSDate($date->textContent);
-                        $this->rawDate = $date->textContent;
+			$this->rawDate = $date->textContent;
 		}
 		
 		$description =  $item->getElementsByTagName('description')->item(0);
@@ -74,11 +74,11 @@ class rss_FeedItem
 		return f_util_StringUtils::shortenString($this->title, 80);
 	}
 	
-        public function getRawDate()
+		public function getRawDate()
 	{
 		return $this->rawDate;
 	}
-        
+		
 	public function getDate()
 	{
 		return $this->date;
@@ -93,7 +93,7 @@ class rss_FeedItem
 	public function getContentForBackoffice()
 	{
 		$warning = MediaHelper::getIcon('warning','small');
-		return '<img src="'.$warning.'" style="border:0; margin-top:-5px; margin-right:5px"/>'.  LocaleService::getInstance()->transFO("m.rss.bo.general.not-display-bo", array('ucf'));
+		return '<img src="'.$warning.'" style="border:0; margin-top:-5px; margin-right:5px"/>'.  LocaleService::getInstance()->trans("m.rss.bo.general.not-display-bo", array('ucf'));
 		
 	}
 	
@@ -139,11 +139,11 @@ class rss_FeedItem
 	
 	public function getChannelLink()
 	{
-	    return $this->channelLink;
+		return $this->channelLink;
 	}
 	
 	public function getChannelTitle()
 	{
-	    return $this->channelTitle;
+		return $this->channelTitle;
 	}
 }
