@@ -4,9 +4,9 @@
 <ul class="feedrss ticker" id="ticker01">
 	<li tal:repeat="item php:channel.getItems(0, configuration.getItemCount())">
 		<span tal:condition="item/getDate" class="date-feedrss">${item/getLocalDate}</span>
-		<a class="link" tal:condition="not: configuration/getOpenLinkInNewWindow" tal:attributes="href item/getPermalink">${item/getCropTitle}</a>
-		<a class="link popup" tal:condition="configuration/getOpenLinkInNewWindow" tal:attributes="href item/getPermalink" onclick="return accessiblePopup(this);">${item/getCropTitle}</a>
-		<span class="item-source">${trans:m.rss.fo.fromSource, ucf} <a class="link" tal:condition="configuration/getShowSource" href="${item/getChannelLink}">${item/getChannelTitle}</a></span>
+		<a class="link" tal:condition="not: configuration/getOpenLinkInNewWindow" tal:attributes="href item/getPermalink">${structure item/getCropTitle}</a>
+		<a class="link popup" tal:condition="configuration/getOpenLinkInNewWindow" tal:attributes="href item/getPermalink" onclick="return accessiblePopup(this);">${structure item/getCropTitle}</a>
+		<span class="item-source">${trans:m.rss.fo.fromSource, ucf} <a class="link" tal:condition="configuration/getShowSource" href="${item/getChannelLink}">${structure item/getChannelTitle}</a></span>
 		<span class="separator" tal:condition="not:repeat/item/end"> | </span>
 	</li>
 </ul>
