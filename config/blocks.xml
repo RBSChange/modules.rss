@@ -3,7 +3,7 @@
 	<block type="modules_rss_feed" dropModels="[modules_rss/feed],[modules_rss/feedgroup]" hidden="true">
 		<parameters>
 			<parameter name="displayMode" type="String" min-occurs="1" default-value="Success" fieldtype="dropdownlist" />
-			<parameter name="cleanLevel" type="String" default-value="none" min-occurs="1" list-id="modules_rss/cleanlevels" />
+			<parameter name="cleanLevel" type="String" default-value="none" min-occurs="1" from-list="modules_rss/cleanlevels" />
 			<parameter name="openLinkInNewWindow" type="Boolean" default-value="false" />
 			<parameter name="useLabel" type="Boolean" default-value="true" />
 			<parameter name="titleOnly" type="Boolean" default-value="false" />

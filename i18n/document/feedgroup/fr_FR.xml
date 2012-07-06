@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.rss.document.feedgroup" lcid="fr_FR">
-  <include id="m.generic.document.document"/>
-  <key id="document-name">feedgroup</key>
-  <key id="label">libellé</key>
-  <key id="label-help">libellé du groupe de flux RSS</key>
-  <key id="feed">flux</key>
-  <key id="feed-help">flux RSS</key>
+	<include id="m.generic.document.document" />
+	<key id="document-name">feedgroup</key>
+	<key id="label">libellé</key>
+	<key id="label-help">libellé du groupe de flux RSS</key>
+	<key id="feed">flux</key>
+	<key id="feed-help">flux RSS</key>
 </i18n>

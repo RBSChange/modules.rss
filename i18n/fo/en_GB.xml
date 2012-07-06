@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.rss.fo" lcid="en_GB">
-  <key id="invalid-rss-feed-description">This RSS feed is no longer valid on our site</key>
-  <key id="invalid-rss-feed-title">Invalid RSS feed</key>
-  <key id="fromSource"/>
+	<key id="invalid-rss-feed-description">This RSS feed is no longer valid on our site</key>
+	<key id="invalid-rss-feed-title">Invalid RSS feed</key>
+	<key id="fromsource" />
 </i18n>

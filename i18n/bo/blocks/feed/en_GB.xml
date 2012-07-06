@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.rss.bo.blocks.feed" lcid="en_GB">
-  <key id="cleanlevel">display clarity level</key>
-  <key id="cleanlevel-help">4 levels: none: displays all data; low: media are filtered out; medium: images and videos are removed; high: only text is displayed (no quotes, no titles, no lists, …)</key>
-  <key id="displaymode">display mode</key>
-  <key id="displaymode-help">template chosen for the feed display, the scrolling text display will only show the title of the RSS feed and the source (if you have  configured it)</key>
-  <key id="itemcount">number of displayable items</key>
-  <key id="itemcount-help">This is the limit for the number of items which can be displayed.</key>
-  <key id="openlinkinnewwindow">Open the link in a new window.</key>
-  <key id="openlinkinnewwindow-help">Open the link in a new window.</key>
-  <key id="title">Feed</key>
-  <key id="titleonly">title only</key>
-  <key id="titleonly-help">Only shows the titles of the items in the received RSS feed.</key>
-  <key id="uselabel">title with label</key>
-  <key id="uselabel-help">Use the document label for the display of the feed title, otherwise the title given in the RSS feed is displayed.</key>
-  <key id="showSource"/>
-  <key id="showSource-help"/>
+	<key id="cleanlevel">display clarity level</key>
+	<key id="cleanlevel-help">4 levels: none: displays all data; low: media are filtered out; medium: images and videos are removed; high: only text is displayed (no quotes, no titles, no lists, …)</key>
+	<key id="displaymode">display mode</key>
+	<key id="displaymode-help">template chosen for the feed display, the scrolling text display will only show the title of the RSS feed and the source (if you have	configured it)</key>
+	<key id="itemcount">number of displayable items</key>
+	<key id="itemcount-help">This is the limit for the number of items which can be displayed.</key>
+	<key id="openlinkinnewwindow">Open the link in a new window.</key>
+	<key id="openlinkinnewwindow-help">Open the link in a new window.</key>
+	<key id="title">Feed</key>
+	<key id="titleonly">title only</key>
+	<key id="titleonly-help">Only shows the titles of the items in the received RSS feed.</key>
+	<key id="uselabel">title with label</key>
+	<key id="uselabel-help">Use the document label for the display of the feed title, otherwise the title given in the RSS feed is displayed.</key>
+	<key id="showsource" />
+	<key id="showsource-help" />
 </i18n>

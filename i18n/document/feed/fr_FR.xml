@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.rss.document.feed" lcid="fr_FR">
-  <include id="m.generic.document.document"/>
-  <key id="document-name">feed</key>
-  <key id="label">libellé</key>
-  <key id="label-help">libellé du flux RSS affiché en titre si vous l'avez spécifié</key>
-  <key id="feedurl">URL du flux RSS</key>
-  <key id="feedurl-help">URL du flux RSS</key>
-  <key id="codereference">Code référence</key>
-  <key id="codereference-help">Code référence du flux RSS</key>
-  <key id="expirestime">Durée d'expiration</key>
-  <key id="expirestime-help">Temps en minutes où les données du flux RSS sont mis en cache, vous pouvez définir la durée avant que le cache ne soit mis à jours, les données sont quand même mis à jour en cas de nouvelles données reçu sur le flux.</key>
+	<include id="m.generic.document.document" />
+	<key id="document-name">feed</key>
+	<key id="label">libellé</key>
+	<key id="label-help">libellé du flux RSS affiché en titre si vous l'avez spécifié</key>
+	<key id="feedurl">URL du flux RSS</key>
+	<key id="feedurl-help">URL du flux RSS</key>
+	<key id="codereference">Code référence</key>
+	<key id="codereference-help">Code référence du flux RSS</key>
+	<key id="expirestime">Durée d'expiration</key>
+	<key id="expirestime-help">Temps en minutes où les données du flux RSS sont mis en cache, vous pouvez définir la durée avant que le cache ne soit mis à jours, les données sont quand même mis à jour en cas de nouvelles données reçu sur le flux.</key>
 </i18n>

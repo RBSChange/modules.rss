@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.rss.bo.general" lcid="en_GB">
-  <key id="module-name">RSS</key>
-  <key id="tree-root-name">RSS</key>
-  <key id="system-folder-name">RSS</key>
-  <key id="not-display-bo">this content cannot be displayed in the backoffice.</key>
-  <key id="cleanlevel-high">high</key>
-  <key id="cleanlevel-low">low</key>
-  <key id="cleanlevel-medium">medium</key>
-  <key id="cleanlevel-none">none</key>
+	<key id="module-name">RSS</key>
+	<key id="tree-root-name">RSS</key>
+	<key id="system-folder-name">RSS</key>
+	<key id="not-display-bo">this content cannot be displayed in the backoffice.</key>
+	<key id="cleanlevel-high">high</key>
+	<key id="cleanlevel-low">low</key>
+	<key id="cleanlevel-medium">medium</key>
+	<key id="cleanlevel-none">none</key>
 </i18n>
