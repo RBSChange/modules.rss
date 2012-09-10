@@ -62,13 +62,13 @@ class rss_FeedService extends f_persistentdocument_DocumentService
 		$feedUrl = $feed->getFeedurl();
 		$client = change_HttpClientService::getInstance()->getNewHttpClient(); 
 		$client->setUri($feedUrl);
-		$request = $client->request();
-		if ($request->getStatus() != 200)
+		$response = $client->send();
+		if ($response->getStatusCode() != \Zend\Http\Response::STATUS_CODE_200)
 		{
 			return null;
 		}
 		
-		$data = $request->getBody();
+		$data = $response->getBody();
 		if ($useCache)
 		{
 			$cacheItem = $dcs->getNewCacheItem(self::FEED_ITEM_CACHE_NS, array('feedId' => $feed->getId()), array('modules_rss/feed'));
