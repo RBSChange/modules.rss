@@ -1,14 +1,23 @@
 <?php
 class rss_FeedChannel
 {
+	/**
+	 * @var string
+	 */
 	private $title;
 	
+	/**
+	 * @var string
+	 */
 	private $link;
 	
+	/**
+	 * @var rss_FeedItem[]
+	 */
 	private $items = array();
 	
 	/**
-	 * @param String $xml
+	 * @param string $xml
 	 */
 	public function __construct($xml, $richContentLevel)
 	{
@@ -20,35 +29,52 @@ class rss_FeedChannel
 		$chanel = $doc->getElementsByTagName('channel')->item(0);
 		if ($chanel !== null)
 		{
-			$title = $chanel->getElementsByTagName('title')->item(0);
-			if ($title !== null)
+			foreach ($chanel->childNodes as $node)
 			{
-				$this->title = $title->textContent;
-			}
-			$link = $chanel->getElementsByTagName('link')->item(0);
-			if ($link !== null)
-			{
-				$this->link = $link->textContent;
-			}
-			
-			foreach ($chanel->getElementsByTagName('item') as $nodeItem)
-			{
-				$item = new rss_FeedItem($nodeItem, $richContentLevel, $this);
-				$this->items[] = $item;
+				switch ($node->nodeName)
+				{
+					case 'title' :
+						$this->title = rss_FeedChannel::fixTitle($node->textContent);
+						break;
+					
+					case 'link' :
+						$this->link = rss_FeedChannel::fixUrl($node->textContent);
+						break;
+					
+					case 'atom:link' :
+						$this->link = rss_FeedChannel::fixUrl($node->getAttribute('href'));
+						break;
+					
+					case 'item' :
+						$item = new rss_FeedItem($node, $richContentLevel, $this);
+						$this->items[] = $item;
+						break;
+				}
 			}
 		}
 	}
 	
+	/**
+	 * @return string
+	 */
 	public function getTitle()
 	{
 		return $this->title;
 	}
 	
+	/**
+	 * @return string
+	 */
 	public function getLink()
 	{
 		return $this->link;
 	}
 	
+	/**
+	 * @param integer $start
+	 * @param integer $count
+	 * @return rss_FeedItem[]
+	 */
 	public function getItems($start = 0, $count = 0)
 	{
 		if ($start == 0 && $count == 0)
@@ -75,6 +101,10 @@ class rss_FeedChannel
 		return count($this->items);
 	}
 	
+	/**
+	 * @param integer $start
+	 * @param integer $count
+	 */
 	public function sliceItems($start = 0, $count = 0)
 	{
 		if ($start > 0 || $count > 0)
@@ -83,6 +113,9 @@ class rss_FeedChannel
 		}
 	}
 	
+	/**
+	 * @return string
+	 */
 	public function getFeedType()
 	{
 		return 'RSS';
@@ -90,7 +123,7 @@ class rss_FeedChannel
 	
 	/**
 	 * @param rssreader_FeedChannel[] $channelArray
-	 * @param string $title;
+	 * @param string $title
 	 * @return rssreader_FeedChannel
 	 */
 	public static function mergeItems($channelArray, $title = null)
@@ -115,14 +148,38 @@ class rss_FeedChannel
 			foreach ($channel->items as $item)
 			{
 				/* @var $item rss_FeedItem */
-				$items[date_Calendar::getInstance(
-						date_Converter::convertDateToLocal($item->getDate()))->getTimestamp() . '-' . str_pad(
-						$itemTotalCount, 5, '0')] = $item;
+				$timestamp = date_Calendar::getInstance(date_Converter::convertDateToLocal($item->getDate()))->getTimestamp();
+				$items[$timestamp . '-' . str_pad($itemTotalCount, 5, '0')] = $item;
 				$itemTotalCount--;
 			}
 		}
 		krsort($items);
 		$finalChanel->items = $items;
 		return $finalChanel;
+	}
+	
+	/**
+	 * @param string $url
+	 * @return string
+	 */
+	public static function fixTitle($url)
+	{
+		// Titles should contain only plain text.
+		return htmlspecialchars($url);
+	}
+	
+	/**
+	 * @param string $url
+	 * @return string
+	 */
+	public static function fixUrl($url)
+	{
+		$url = trim($url);
+		// Prevent JavaScript injections.
+		if (f_util_StringUtils::beginsWith('javascript:', $url) || f_util_StringUtils::contains($url, '"'))
+		{
+			return '#';
+		}
+		return htmlspecialchars($url);
 	}
 }
