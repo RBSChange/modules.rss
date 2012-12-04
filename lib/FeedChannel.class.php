@@ -1,23 +1,26 @@
 <?php
+/**
+ * @deprecated use rss_Channel
+ */
 class rss_FeedChannel
 {
 	/**
-	 * @var string
+	 * @deprecated
 	 */
 	private $title;
 	
 	/**
-	 * @var string
+	 * @deprecated
 	 */
 	private $link;
 	
 	/**
-	 * @var rss_FeedItem[]
+	 * @deprecated
 	 */
 	private $items = array();
 	
 	/**
-	 * @param string $xml
+	 * @deprecated
 	 */
 	public function __construct($xml, $richContentLevel)
 	{
@@ -55,7 +58,7 @@ class rss_FeedChannel
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getTitle()
 	{
@@ -63,7 +66,7 @@ class rss_FeedChannel
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getLink()
 	{
@@ -71,9 +74,7 @@ class rss_FeedChannel
 	}
 	
 	/**
-	 * @param integer $start
-	 * @param integer $count
-	 * @return rss_FeedItem[]
+	 * @deprecated
 	 */
 	public function getItems($start = 0, $count = 0)
 	{
@@ -86,7 +87,7 @@ class rss_FeedChannel
 	}
 	
 	/**
-	 * @return boolean
+	 * @deprecated
 	 */
 	public function hasItems()
 	{
@@ -94,7 +95,7 @@ class rss_FeedChannel
 	}
 	
 	/**
-	 * @return integer
+	 * @deprecated
 	 */
 	public function length()
 	{
@@ -102,8 +103,7 @@ class rss_FeedChannel
 	}
 	
 	/**
-	 * @param integer $start
-	 * @param integer $count
+	 * @deprecated
 	 */
 	public function sliceItems($start = 0, $count = 0)
 	{
@@ -114,7 +114,7 @@ class rss_FeedChannel
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getFeedType()
 	{
@@ -122,9 +122,7 @@ class rss_FeedChannel
 	}
 	
 	/**
-	 * @param rssreader_FeedChannel[] $channelArray
-	 * @param string $title
-	 * @return rssreader_FeedChannel
+	 * @deprecated
 	 */
 	public static function mergeItems($channelArray, $title = null)
 	{
@@ -159,8 +157,7 @@ class rss_FeedChannel
 	}
 	
 	/**
-	 * @param string $url
-	 * @return string
+	 * @deprecated
 	 */
 	public static function fixTitle($url)
 	{
@@ -169,8 +166,7 @@ class rss_FeedChannel
 	}
 	
 	/**
-	 * @param string $url
-	 * @return string
+	 * @deprecated
 	 */
 	public static function fixUrl($url)
 	{

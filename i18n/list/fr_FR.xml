@@ -2,5 +2,9 @@
 <i18n baseKey="m.rss.list" lcid="fr_FR">
 	<key id="blocktemplates-success">par défaut</key>
 	<key id="blocktemplates-success-scrolling">texte défilant</key>
+	<key id="content-formatters-title">modes de formatage du contenu</key>
+	<key id="content-formatters-secure">sécurisé (recommandé)</key>
+	<key id="content-formatters-text">texte brut</key>
+	<key id="content-formatters-none">aucun (déconseillé)</key>
 	<key id="fromsource">de</key>
 </i18n>

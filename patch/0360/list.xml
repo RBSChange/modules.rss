@@ -9,12 +9,5 @@
 			<staticitem value="rss_TextContentFormatter" label="m.rss.list.content-formatters-text" />
 			<staticitem value="rss_NoneContentFormatter" label="m.rss.list.content-formatters-none" />
 		</staticlist>
-		<!-- Deprecated. -->
-		<staticlist byListid="modules_rss/cleanlevels" description="" label="Clean Levels">
-			<staticitem value="none" label="&amp;modules.rss.bo.general.Cleanlevel-none;" />
-			<staticitem value="low" label="&amp;modules.rss.bo.general.Cleanlevel-low;" />
-			<staticitem value="medium" label="&amp;modules.rss.bo.general.Cleanlevel-medium;" />
-			<staticitem value="high" label="&amp;modules.rss.bo.general.Cleanlevel-high;" />
-		</staticlist>
 	</systemfolder>
 </script>

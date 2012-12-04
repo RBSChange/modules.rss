@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-	<block type="modules_rss_Channel" dropModels="[modules_rss/feed],[modules_rss/feedgroup]" icon="rss" hidden="true">
+	<block type="modules_rss_Channel" icon="rss" hidden="true">
 		<parameters>
 			<parameter name="displayMode" type="String" min-occurs="1" default-value="Success" fieldtype="dropdownlist" />
 			<parameter name="contentFormatter" type="String" default-value="rss_SecureContentFormatter" min-occurs="1" list-id="modules_rss/contentformatters" />
@@ -24,7 +24,7 @@
 	</block>
 	
 	<!-- Deprecated. -->
-	<block type="modules_rss_feed" hidden="true">
+	<block type="modules_rss_feed" dropModels="[modules_rss/feed],[modules_rss/feedgroup]" hidden="true">
 		<parameters>
 			<parameter name="displayMode" type="String" min-occurs="1" default-value="Success" fieldtype="dropdownlist" />
 			<parameter name="cleanLevel" type="String" default-value="none" min-occurs="1" list-id="modules_rss/cleanlevels" />

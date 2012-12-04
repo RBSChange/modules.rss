@@ -1,45 +1,46 @@
 <?php
+/**
+ * @deprecated use rss_ChannelItem
+ */
 class rss_FeedItem
 {
 	/**
-	 * @var string
+	 * @deprecated
 	 */
 	private $title;
 	
 	/**
-	 * @var string
+	 * @deprecated
 	 */
 	private $permalink;
 	
 	/**
-	 * @var string
+	 * @deprecated
 	 */
 	private $rawDate;
 	
 	/**
-	 * @var string
+	 * @deprecated
 	 */
 	private $date;
 	
 	/**
-	 * @var string
+	 * @deprecated
 	 */
 	private $description;
 	
 	/**
-	 * @var string
+	 * @deprecated
 	 */
 	private $channelLink;
 	
 	/**
-	 * @var string
+	 * @deprecated
 	 */
 	private $channelTitle;
 	
 	/**
-	 * @param DOMElement $item
-	 * @param string $richContentLevel
-	 * @param rss_FeedChannel $parent
+	 * @deprecated
 	 */
 	public function __construct($item, $richContentLevel, $parent)
 	{
@@ -79,7 +80,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getPermalink()
 	{
@@ -87,7 +88,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getTitle()
 	{
@@ -95,7 +96,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getCropTitle()
 	{
@@ -103,7 +104,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getRawDate()
 	{
@@ -111,7 +112,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getDate()
 	{
@@ -119,8 +120,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @param string $format
-	 * @return string
+	 * @deprecated
 	 */
 	public function getLocalDate($format = 'd/m/Y - H:i')
 	{
@@ -129,7 +129,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getContentForBackoffice()
 	{
@@ -139,7 +139,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getContent()
 	{
@@ -147,9 +147,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @param string $html
-	 * @param string $richContentLevel
-	 * @return string
+	 * @deprecated
 	 */
 	private function filterContent($html, $richContentLevel)
 	{
@@ -178,8 +176,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @param string $string
-	 * @return string
+	 * @deprecated
 	 */
 	private function parseRSSDate($string)
 	{
@@ -197,7 +194,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getChannelLink()
 	{
@@ -205,7 +202,7 @@ class rss_FeedItem
 	}
 	
 	/**
-	 * @return string
+	 * @deprecated
 	 */
 	public function getChannelTitle()
 	{

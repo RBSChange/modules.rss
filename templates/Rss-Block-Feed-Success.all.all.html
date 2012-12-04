@@ -7,8 +7,8 @@
 			<a class="link popup" tal:condition="configuration/getOpenLinkInNewWindow" tal:attributes="href item/getPermalink" onclick="return accessiblePopup(this);">${item/getCropTitle}</a>
 		</h2>
 		<p class="normal meta-infos">
-			${trans:m.rss.fo.fromSource, ucf} <a class="link" tal:condition="configuration/getShowSource" href="${item/getChannelLink}">${item/getChannelTitle}</a>
-			<tal:block tal:condition="item/getDate"><span class="separator"> - </span>${item/getLocalDate}</tal:block>
+			<tal:block tal:condition="configuration/getShowSource">${trans:m.rss.fo.fromSource, ucf} <a class="link" href="${item/getChannelLink}">${item/getChannelTitle}</a></tal:block>
+			<tal:block tal:condition="item/getDate"><span class="separator" tal:condition="configuration/getShowSource"> - </span>${item/getLocalDate}</tal:block>
 		</p>
 		<div tal:condition="not: configuration/getTitleOnly" class="normal content-feedrss">
 			<tal:block tal:condition="backoffice">${item/getContentForBackoffice}</tal:block>
