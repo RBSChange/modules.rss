@@ -1,0 +1,14 @@
+<h1 change:h="">${channel/getTitleAsHtml}</h1>
+<ul class="document-list">
+	<li class="${alternateclass:itemIdex}" tal:repeat="item php:channel.getItems(0, configuration.getItemCount())">
+		<h2 change:h="">
+			<a class="link" tal:condition="not: configuration/getOpenLinkInNewWindow" href="${item/getLinkAsHtml}">${item/getShortTitleAsHtml}</a>
+			<a class="link popup" tal:condition="configuration/getOpenLinkInNewWindow" href="${item/getLinkAsHtml}" onclick="return accessiblePopup(this);">${item/getShortTitleAsHtml}</a>
+		</h2>
+		<p class="normal meta-infos">
+			<tal:block tal:condition="configuration/getShowSource">${trans:m.rss.fo.fromSource, ucf} <a class="link" href="${item/getChannel/getLinkAsHtml}">${item/getChannel/getTitleAsHtml}</a></tal:block>
+			<tal:block tal:condition="item/getDate"><span class="separator" tal:condition="configuration/getShowSource"> - </span>${datetime:item/getUIDate}</tal:block>
+		</p>
+		<div tal:condition="not: configuration/getTitleOnly" class="normal content-feedrss">${item/getDescriptionAsHtml}</div>
+	</li>
+</ul>

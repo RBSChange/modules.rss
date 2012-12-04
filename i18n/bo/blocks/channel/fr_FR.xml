@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.rss.bo.blocks.channel" lcid="fr_FR">
+	<key id="title">Dernières entrée d'un flux ou d'un groupe de flux</key>
+	<key id="displaymode">mode d'affichage</key>
+	<key id="displaymode-help">template choisi pour l'affichage du flux, l'affichage par texte défilant n'affichera que le titre du flux RSS, et la source si vous l'avez configuré</key>
+	<key id="contentformatter">formattage du contenu</key>
+	<key id="contentformatter-help">Plusieurs formatteurs sont disponibles selon les besoins. Par défaut, préférer le formatage "sécurisé" qui offre la meilleure sécurité pour les utilisateurs tout en préservant l'essentiel de la mise en page.</key>
+	<key id="openlinkinnewwindow">ouvre le liens dans une nouvelle fenêtre</key>
+	<key id="openlinkinnewwindow-help">ouvre le liens dans une nouvelle fenêtre</key>
+	<key id="uselabel">titre avec le libellé</key>
+	<key id="uselabel-help">utilisation du libellé du document pour l'affichage du titre du flux, sinon ce sera le titre donnée dans le flux RSS qui sera affiché</key>
+	<key id="titleonly">titre uniquement</key>
+	<key id="titleonly-help">n'affiche que les titres des items de flux RSS reçu</key>
+	<key id="itemcount">nombre d'items affichable</key>
+	<key id="itemcount-help">limite du nombre d'items affichable</key>
+	<key id="showsource">afficher la source</key>
+	<key id="showsource-help">affiche la source de l'item et le liens vers le site source</key>
+</i18n>

@@ -2,12 +2,12 @@
 <script>
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
+
 	<systemfolder module="list" relatedmodule="rss">
-		<staticlist byListid="modules_rss/cleanlevels" description="" label="Clean Levels">
-			<staticitem value="none" label="m.rss.bo.general.cleanlevel-none" />
-			<staticitem value="low" label="m.rss.bo.general.cleanlevel-low" />
-			<staticitem value="medium" label="m.rss.bo.general.cleanlevel-medium" />
-			<staticitem value="high" label="m.rss.bo.general.cleanlevel-high" />
+		<staticlist byListid="modules_rss/contentformatters" label="m.rss.list.content-formatters-title">
+			<staticitem value="rss_SecureContentFormatter" label="m.rss.list.content-formatters-secure" />
+			<staticitem value="rss_TextContentFormatter" label="m.rss.list.content-formatters-text" />
+			<staticitem value="rss_NoneContentFormatter" label="m.rss.list.content-formatters-none" />
 		</staticlist>
 	</systemfolder>
 </script>

@@ -1,0 +1,11 @@
+<script change:javascript="head 'modules.rss.lib.js.liscroller'"></script>
+<h2 change:h="">${channel/getTitleAsHtml}</h2>
+<ul class="feedrss ticker" id="ticker01">
+	<li tal:repeat="item php:channel.getItems(0, configuration.getItemCount())">
+		<span tal:condition="item/getDate" class="date-feedrss">${datetime:item/getUIDate}</span>
+		<a class="link" tal:condition="not: configuration/getOpenLinkInNewWindow" href="${item/getLinkAsHtml}">${item/getShortTitleAsHtml}</a>
+		<a class="link popup" tal:condition="configuration/getOpenLinkInNewWindow" href="${item/getLinkAsHtml}" onclick="return accessiblePopup(this);">${item/getShortTitleAsHtml}</a>
+		<span class="item-source" tal:condition="configuration/getShowSource">${trans:m.rss.fo.fromSource, ucf} <a class="link" href="${item/getChannel/getLinkAsHtml}">${item/getChannel/getTitleAsHtml}</a></span>
+		<span class="separator" tal:condition="not:repeat/item/end"> | </span>
+	</li>
+</ul>
